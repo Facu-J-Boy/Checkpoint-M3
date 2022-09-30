@@ -27,6 +27,7 @@ const utils = require('../utils');
    */
 const classifyBooks = () => {
    // ⚠️ No modificar nada arriba de esta línea ⚠️
+   if(!utils.books.length) throw new Error('No hay libros disponibles');
 }
 
 //⚠️ No modificar nada debajo de esta línea ⚠️

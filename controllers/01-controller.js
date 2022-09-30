@@ -19,7 +19,6 @@ const utils = require('../utils');
   */  
 
 const addBook = (book) => {
-  console.log('BOOK --->', book);
   const [book1, book2] = book;
   const libro1 = utils.books.find((b) => b.id === book1.id);
   const libro2 = utils.books.find((b) => b.id === book2.id);
