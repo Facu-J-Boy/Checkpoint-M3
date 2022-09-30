@@ -19,6 +19,13 @@ const utils = require('../utils');
   */  
 
 const addBook = (book) => {
+  console.log('BOOK --->', book);
+  const [book1, book2] = book;
+  const libro1 = utils.books.find((b) => b.id === book1.id);
+  const libro2 = utils.books.find((b) => b.id === book2.id);
+  if(libro1 || libro2) throw new Error('ya esta el libro en la base de datos.');
+  utils.books.push(book1, book2);
+  return utils.books;
   
 }
 // ⚠️ No modificar nada debajo de esta línea ⚠️
