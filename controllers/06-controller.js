@@ -28,6 +28,12 @@ const utils = require('../utils');
 const classifyBooks = () => {
    // ⚠️ No modificar nada arriba de esta línea ⚠️
    if(!utils.books.length) throw new Error('No hay libros disponibles');
+   let generos = []; 
+   utils.books.forEach((book) => generos.push(book.genre));
+   let filterGenre = new Set(generos);
+   let genre = {};
+   filterGenre.forEach((e) =>  genre[e] = utils.books.filter((b) => b.genre === e));
+   return genre;
 }
 
 //⚠️ No modificar nada debajo de esta línea ⚠️
