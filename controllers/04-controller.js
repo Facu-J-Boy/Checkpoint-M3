@@ -17,7 +17,10 @@ const utils = require("../utils");
 
 const deleteBook = (id) => {
   // ⚠️ No modificar nada arriba de esta línea ⚠️
-  
+  const findBook = utils.books.find((b) => b.id === id);
+  if(!findBook) throw new Error(`no existe el libro con id: ${id}`);
+  utils.books.pop();
+  return utils.books;
 };
 
 // ⚠️ No modificar nada debajo de esta línea ⚠️
