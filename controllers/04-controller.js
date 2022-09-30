@@ -19,7 +19,7 @@ const deleteBook = (id) => {
   // ⚠️ No modificar nada arriba de esta línea ⚠️
   const findBook = utils.books.find((b) => b.id === id);
   if(!findBook) throw new Error(`no existe el libro con id: ${id}`);
-  utils.books.pop();
+  utils.books = utils.books.filter((books) => books.id !== id);
   return utils.books;
 };
 
