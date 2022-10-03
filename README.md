@@ -17,3 +17,4 @@ Antes de hacer su último commit para la entrega del checkpoint verificar que to
 ## Condiciones de aprobación
 
 Para aprobar el checkpoint es necesario contar con un mínimo de 10 suites pasando correctamente sobre las 12 totales.
+# Checkpoint-M3
